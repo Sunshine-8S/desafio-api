@@ -1,5 +1,7 @@
 :root {
     --color-fondo: #EAE4D5;
+    --color-borde: #B6B09F;
+    --color-secciones: #F2F2F2;
 }
 
 * , *::before, *::after {
@@ -9,6 +11,16 @@
 
 body {
     background-color: var(--color-fondo);
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 550;
+    font-size: 16px;
+}
+
+main {
+    width: 80%;
+    margin: auto;
 }
 
 /* Grupos */
@@ -17,11 +29,34 @@ body, div {
     margin: 0;
 }
 
+h1, h2 {
+    font-family: "Patua One", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.contenedor-info-usuario, .contenedor-direccion, .contenedor-credenciales {
+    background-color: var(--color-secciones);
+    border: solid 2px var(--color-borde);
+}
+.contenedor-direccion, .h2-credenciales, .contenedor-info-usuario {
+    text-align: center;
+}
+
+.contenedor-info-usuario, .foto-usuario, .contenedor-direccion, .contenedor-credenciales, #btnSiguiente {
+    margin-bottom: 20px;
+}
+
 /* Header */
 
 .header {
     width: 75%;
     margin: 20px auto;
+    font-family: "Nunito", sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
 }
 
 .contenedor-logo {
@@ -30,8 +65,89 @@ body, div {
 }
 
 .logo {
+    width: 80%;
+}
+
+/* Main */
+
+#btnSiguiente {
     width: 100%;
+    height: 50px;
+    background-color: var(--color-borde);
+    color: var(--color-secciones);
+    font-family: "Patua One", serif;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnSiguiente:hover {
+    transform: scale(0.97);
+    cursor: pointer;
+    box-shadow: black 0px 0px 8px 0px;
+}
+
+/* Info Usuario */
+
+.foto-usuario {
+    border: double ;
+    border-radius: 15px;
+}
+
+#listaUsuario {
+    list-style: none;
+    width: 58%;
+    margin: 15px auto;
+    text-align: start;
+    padding: 0;
+}
+
+/* Direccion */
+
+/* Credenciales */
+
+.contenedor-credenciales {
+    padding: 0 20px;
 }
 
 
+/* Media Queries */
 
+@media screen and (min-width: 768px) {
+    .header {
+        width: 80%;
+    }
+
+    #listaUsuario {
+        width: 45%;
+    }
+
+    .contenedor-credenciales {
+        padding: 0 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    body {
+        font-size: 19px;
+    }
+
+    main {
+        width: 75%;
+    }
+
+    #listaUsuario {
+        width: 38%;
+    }
+
+    #btnSiguiente {
+        font-size: 20px;
+    }
+
+    .contenedor-credenciales {
+        padding: 0 100px;
+    }
+}

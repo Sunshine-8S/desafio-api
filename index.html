@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Patua+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./almacenamiento-en-la-nube.favicon" type="image/x-icon">
     <title>Document</title>
@@ -19,13 +22,20 @@
         </div>
     </header>
     <main>
-        <h1 id="titulo"></h1>
-        <div id="fotoUsuario"></div>
-        <ul id="listaUsuario"></ul>
-        <h2>Dirección</h2>
-        <div id="direccion"></div>
-        <h2>Credenciales</h2>
-        <div id="credenciales"></div>
+        <div class="contenedor-info-usuario">
+            <h1 id="titulo"></h1>
+            <div id="fotoUsuario"></div>
+            <ul id="listaUsuario"></ul>
+        </div>
+        <div class="contenedor-direccion">
+            <h2>Dirección</h2>
+            <div id="direccion"></div>
+        </div>
+        <div class="contenedor-credenciales">
+            <h2 class="h2-credenciales">Credenciales</h2>
+            <div id="credenciales"></div>
+        </div>
+        <button id="btnSiguiente" type="button">Siguiente usuario</button>
     </main>
 
     <script src="./js/script.js"></script>
